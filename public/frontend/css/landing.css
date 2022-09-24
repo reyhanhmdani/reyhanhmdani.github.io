@@ -1,0 +1,104 @@
+body {
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 41 74 / var(--tw-bg-opacity));
+   }
+
+    /* a{
+        text-decoration: none;
+        outline: none;
+        text-decoration-style: none;
+        box-sizing: border-box;
+
+    } */
+    .colp-popup{
+        margin: 0 1em 71px 0;
+        opacity: 0.9;
+
+    }
+    /* .hd-card{ */
+
+
+    .col-top-hd{
+        background-color: rgb(79, 184, 10);
+        height: 180px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+
+    }
+    /* .nav-mainmenu{
+        background-color:rgba(133, 134, 131, 0.678);
+        border: none;
+    }
+    .menupage-active{
+        display: none;
+    }
+
+    .informasibody{
+        display: none;
+    } */
+    .judul{
+        margin-bottom: 100px;
+
+    }
+    h2{
+        color: #FFFFFF;
+    }
+    p{
+        color: #FFFFFF;
+    }
+
+    #login{
+        font-size: 28px;
+        font-weight: 10;
+        --tw-bg-opacity: 1;
+        background-color: #24273fa9;
+        border-radius: 5pc;
+        text-decoration: none;
+        /* letter-spacing: 2px; */
+        padding: 15px;
+        color: red;
+        /* width: 100% */
+        /* margin-top: 100px */
+    }
+
+    .masthead {
+        width: 100% 100%;
+        min-height: 940px;
+
+    }
+
+
+
+     /* {{--  landingpage  --}} */
+     @media only screen and (max-width:500px) {
+        /* For mobile phones: */
+         .nav-mainmenu {
+            background-color: rgba(48, 127, 138, 0.938);
+            color: rgba(22, 22, 22, 0.973);
+        }
+        .menupage-active{
+            display: block;
+
+        }
+        .menupage{
+            display: none;
+        }
+        .ividio{
+            width: auto;
+            height: 100px;
+        }
+        .active-informasibody{
+            display: none;
+        }
+        .informasibody{
+            display: block;
+        }
+
+ }
+
+
+ /* DI dalam section POST  */
+ .container-post{
+    margin-top: 100px
+ }

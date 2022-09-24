@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,8 +24,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home',[
-            'title' => 'PonpesAinulYakin'
+        return view('mainpage',[
+            "title" => 'PonpesAinulYakin',
+            "posts" => Post::all()
         ]);
+    }
+
+    public function show(Post $post)
+    {
+        return view('post',[
+            // ngirimin data title dari halamannya
+          "title" => "Single Post",
+          "active" => 'posts',
+          "post" => $post,
+
+
+      ]);
     }
 }

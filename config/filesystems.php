@@ -53,6 +53,14 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
 
+        'hosting' => [
+            'driver' => 'local',
+            'root ' => public_path() . '/../../public_html/'. env('FOLDER_IN_PUBLIC_HTML') .'/storage',
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+
+        ]
+
     ],
 
     /*

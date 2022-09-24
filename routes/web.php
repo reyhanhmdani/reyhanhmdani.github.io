@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\AdminPostsController;
+use App\Http\Controllers\DashboardPostController;
+use App\Models\adminposts;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,16 +17,39 @@ use App\Http\Controllers\AdminPostController;
 |
 */
 
-Route::get('/', function () {
-    return view('mainpage',[
-        'title' => 'PonpesAinulYakin'
-    ]);
-});
+// Route::get('/about', function () {
+//     return view('about',[
+//         'title' => 'About me',
+//         'active'=> "about"
+//     ]);
+// });
+
+
+
+Route::get('/', [PostController::class, 'index']);
+
+// Route::get('/', function () {
+//     return view('mainpage',[
+//         'title' => 'Beranda',
+//         'active' => 'home'
+//     ]);
+// });
+
+Route::get('posts/{post:id}', [PostController::class, 'show']);
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', function() {
+    return view('dashboard.index');
+})->middleware('auth');
 
-// Route::resource('/',AdminPostController ::class)->middleware('auth');
+
+// Route::get('/dashboard/posts/checkSlug', [AdminPostController::class, 'checkSlug'])->middleware('auth');
+// Route::resource('/dashboard' ,AdminPostsController ::class)->middleware('auth');
+
+Route::get('/dashboard/posts', [DashboardPostConrtroller::class, 'DashboardPostController@index '])->middleware('auth');
+Route::resource('/dashboard/posts' ,DashboardPostController ::class)->middleware('auth');
+
+Route::get('/home', [PostController::class, 'index'])->name('home');
+
 
