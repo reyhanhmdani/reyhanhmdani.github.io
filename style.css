@@ -30,6 +30,16 @@
     --surface-card: #FFFFFF;
     --border-subtle: rgba(0, 0, 0, 0.05);
     --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Code Window Theme */
+    --code-bg: #1C1917;
+    --code-text: #FAFAF9;
+    --code-border: rgba(255, 255, 255, 0.08);
+    --code-header: rgba(255, 255, 255, 0.03);
+    --code-shadow: rgba(0, 0, 0, 0.4);
+    --code-keyword: #CA8A04;
+    --code-string: #A8A29E;
+    --code-comment: #78716C;
 }
 
 /* Dark Theme Variables */
@@ -44,6 +54,16 @@
     --surface-card: #1C1A18;
     --border-subtle: rgba(255, 255, 255, 0.06);
     --shadow-color: rgba(0, 0, 0, 0.4);
+
+    /* Soft white Code Window for dark mode */
+    --code-bg: #E7E5E4;
+    --code-text: #292524;
+    --code-border: rgba(0, 0, 0, 0.1); 
+    --code-header: rgba(0, 0, 0, 0.05); 
+    --code-shadow: rgba(202, 138, 4, 0.15);
+    --code-keyword: #CA8A04; 
+    --code-string: #57534E; 
+    --code-comment: #A8A29E; 
 }
 
 /* System theme: inherit OS preference */
@@ -706,11 +726,11 @@ nav.scrolled {
 }
 
 .code-window {
-    background: var(--stone-dark);
+    background: var(--code-bg);
     border-radius: var(--radius-lg);
-    box-shadow: 0 30px 60px rgba(28, 25, 23, 0.2);
+    box-shadow: 0 30px 60px var(--code-shadow);
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid var(--code-border);
     animation: float-window 6s ease-in-out infinite;
     transform-style: preserve-3d;
 }
@@ -722,11 +742,11 @@ nav.scrolled {
 }
 
 .code-header {
-    background: rgba(255,255,255,0.03);
+    background: var(--code-header);
     padding: 12px 16px;
     display: flex;
     gap: 8px;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid var(--code-border);
 }
 
 .mac-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -739,15 +759,15 @@ nav.scrolled {
     font-family: var(--font-mono);
     font-size: 0.85rem; 
     line-height: 1.6;
-    color: var(--bg-cream);
+    color: var(--code-text);
     overflow-x: auto;
 }
 
-.token-keyword { color: var(--gold-cta); } 
-.token-string { color: #A8A29E; } 
-.token-comment { color: var(--taupe-accent); font-style: italic; }
-.token-property { color: var(--bg-cream); }
-.token-boolean { color: var(--gold-cta); }
+.token-keyword { color: var(--code-keyword); } 
+.token-string { color: var(--code-string); } 
+.token-comment { color: var(--code-comment); font-style: italic; }
+.token-property { color: var(--code-text); }
+.token-boolean { color: var(--code-keyword); }
 
 /* ==========================================================================
    6. AI CHAT WIDGET (GEMINI INTEGRATION)
