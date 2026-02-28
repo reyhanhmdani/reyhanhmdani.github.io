@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
+     <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -127,6 +130,34 @@
             </div>
         </section>
 
+        <!-- Tech Stack Marquee Section -->
+        <section class="tech-marquee-section" aria-label="Technology Stack">
+            <div class="marquee-track">
+                <!-- Group 1 -->
+                <div class="marquee-group">
+                    <i class="fa-brands fa-react" title="React"></i>
+                    <i class="fa-brands fa-js" title="JavaScript"></i>
+                    <i class="fa-brands fa-golang" title="Go"></i>
+                    <i class="fa-brands fa-html5" title="HTML5"></i>
+                    <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                    <i class="fa-brands fa-php" title="PHP"></i>
+                    <svg class="custom-svg-icon" viewBox="0 0 24 24" fill="currentColor" title="Tailwind CSS"><path d="M12.001,4.8c-3.208,0-5.245,1.6-6.112,4.8c1.333-2.667,3.333-3.044,6-1.133 c1.261,0.903,2.155,1.538,3.447,1.538c3.208,0,5.245-1.6,6.112-4.8c-1.333,2.667-3.333,3.044-6,1.133 C14.187,5.435,13.292,4.8,12.001,4.8z M5.889,14.4c-3.208,0-5.245,1.6-6.112,4.8c1.333-2.667,3.333-3.044,6-1.133 c1.261,0.903,2.155,1.538,3.447,1.538c3.208,0,5.245-1.6,6.112-4.8c-1.333,2.667-3.333,3.044-6,1.133 C8.075,15.035,7.181,14.4,5.889,14.4z"/></svg>
+                    <i class="fa-brands fa-laravel" title="Laravel"></i>
+                </div>
+                <!-- Group 2 (Duplicate for infinite loop) -->
+                <div class="marquee-group" aria-hidden="true">
+                    <i class="fa-brands fa-react"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-golang"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-php"></i>
+                    <svg class="custom-svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001,4.8c-3.208,0-5.245,1.6-6.112,4.8c1.333-2.667,3.333-3.044,6-1.133 c1.261,0.903,2.155,1.538,3.447,1.538c3.208,0,5.245-1.6,6.112-4.8c-1.333,2.667-3.333,3.044-6,1.133 C14.187,5.435,13.292,4.8,12.001,4.8z M5.889,14.4c-3.208,0-5.245,1.6-6.112,4.8c1.333-2.667,3.333-3.044,6-1.133 c1.261,0.903,2.155,1.538,3.447,1.538c3.208,0,5.245-1.6,6.112-4.8c-1.333,2.667-3.333,3.044-6,1.133 C8.075,15.035,7.181,14.4,5.889,14.4z"/></svg>
+                    <i class="fa-brands fa-laravel"></i>
+                </div>
+            </div>
+        </section>
+
         <!-- About & Skills Section -->
         <section id="about">
             <div class="container">
@@ -195,57 +226,53 @@
         <!-- Projects Section -->
         <section id="projects">
             <div class="container">
-                <div class="section-header fade-up">
-                    <span class="mono-tag">02. Selected Works</span>
-                    <h2 class="section-title">Featured Projects</h2>
+                <div class="section-header fade-up" style="margin-bottom: 80px;">
+                    <span class="mono-tag" style="margin-bottom: 24px;">02. Selected Works</span>
+                    <h2 class="section-title" style="font-size: clamp(3rem, 6vw, 5rem); letter-spacing: -0.04em;">Featured<br><span style="color: var(--taupe-accent);">Projects.</span></h2>
                 </div>
 
-                <div class="projects-grid">
-                    <!-- Project 1: Ayobuatbaik -->
-                    <div class="project-card fade-up">
-                        <div class="project-visual-wrapper">
-                            <div class="project-visual">
-                                <img src="image/Porto1.png" alt="Ayobuatbaik.com" class="project-image parallax" data-speed="0.08">
-                            </div>
+                <div class="editorial-list">
+                    <!-- Project 1 -->
+                    <article class="editorial-project fade-up">
+                        <div class="editorial-info">
+                            <span class="editorial-num">01</span>
+                            <h3 class="editorial-title">Ayobuatbaik.com</h3>
+                            <div class="editorial-tech">Laravel <span>&mdash;</span> Tailwind</div>
+                            <p class="editorial-desc">A trusted online donation platform supporting various social and humanitarian programs.</p>
+                            <a href="https://ayobuatbaik.com" target="_blank" rel="noopener noreferrer" class="editorial-link">Visit Website <svg viewBox="0 0 24 24" fill="none" class="icon" stroke="currentColor" stroke-width="1.5"><path d="M7 17l9.2-9.2M17 16.5V7H7.5"/></svg></a>
                         </div>
-                        <div class="project-info">
-                            <div class="project-tech"><span>LARAVEL</span><span>TAILWIND</span></div>
-                            <h3 class="project-title">Ayobuatbaik.com</h3>
-                            <p class="project-desc">A trusted online donation platform supporting various social and humanitarian programs.</p>
-                            <a href="https://ayobuatbaik.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.9rem;" data-text="Visit Website"><span class="btn-text">Visit Website</span></a>
+                        <div class="editorial-visual" onclick="window.open('https://ayobuatbaik.com', '_blank')">
+                            <img src="image/Porto1.png" alt="Ayobuatbaik.com" class="parallax" data-speed="0.05">
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 2: Andreraditya.guru -->
-                    <div class="project-card fade-up">
-                        <div class="project-visual-wrapper">
-                            <div class="project-visual">
-                                <img src="image/andreradityaguru.png" alt="Andreraditya.guru" class="project-image parallax" data-speed="0.08">
-                            </div>
+                    <!-- Project 2 -->
+                    <article class="editorial-project fade-up">
+                        <div class="editorial-info">
+                            <span class="editorial-num">02</span>
+                            <h3 class="editorial-title">Andreraditya.guru</h3>
+                            <div class="editorial-tech">Laravel <span>&mdash;</span> Tailwind</div>
+                            <p class="editorial-desc">An Islamic educational portal and advice platform featuring articles and interactive Q&A sessions.</p>
+                            <a href="https://andreraditya.guru" target="_blank" rel="noopener noreferrer" class="editorial-link">Visit Website <svg viewBox="0 0 24 24" fill="none" class="icon" stroke="currentColor" stroke-width="1.5"><path d="M7 17l9.2-9.2M17 16.5V7H7.5"/></svg></a>
                         </div>
-                        <div class="project-info">
-                            <div class="project-tech"><span>LARAVEL</span><span>TAILWIND</span></div>
-                            <h3 class="project-title">Andreraditya.guru</h3>
-                            <p class="project-desc">An Islamic educational portal and advice platform featuring articles and interactive Q&A sessions.</p>
-                            <a href="https://andreraditya.guru" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.9rem;" data-text="Visit Website"><span class="btn-text">Visit Website</span></a>
+                        <div class="editorial-visual" onclick="window.open('https://andreraditya.guru', '_blank')">
+                            <img src="image/andreradityaguru.png" alt="Andreraditya.guru" class="parallax" data-speed="0.05">
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Project 3: Selfa.sch.id -->
-                    <div class="project-card fade-up">
-                        <div class="project-visual-wrapper">
-                            <div class="project-visual">
-                                <img src="image/porto-selfa.png" alt="Selfa.sch.id" class="project-image parallax" data-speed="0.08">
-                            </div>
+                    <!-- Project 3 -->
+                    <article class="editorial-project fade-up">
+                        <div class="editorial-info">
+                            <span class="editorial-num">03</span>
+                            <h3 class="editorial-title">Selfa.sch.id</h3>
+                            <div class="editorial-tech">Laravel <span>&mdash;</span> Tailwind</div>
+                            <p class="editorial-desc">A modern and interactive website engineered for the Selfa Islamic School in Klaten, Indonesia.</p>
+                            <a href="https://selfa.sch.id" target="_blank" rel="noopener noreferrer" class="editorial-link">Visit Website <svg viewBox="0 0 24 24" fill="none" class="icon" stroke="currentColor" stroke-width="1.5"><path d="M7 17l9.2-9.2M17 16.5V7H7.5"/></svg></a>
                         </div>
-                        <div class="project-info">
-                            <div class="project-tech"><span>Laravel</span><span>TAILWIND</span></div>
-                            <h3 class="project-title">Selfa.sch.id</h3>
-                            <p class="project-desc">Selfa.sch.id is a website for the Selfa School, an Islamic school in Klaten, Indonesia.</p>
-                            <a href="https://selfa.sch.id" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.9rem;" data-text="Visit Website"><span class="btn-text">Visit Website</span></a>
+                        <div class="editorial-visual" onclick="window.open('https://selfa.sch.id', '_blank')">
+                            <img src="image/porto-selfa.png" alt="Selfa.sch.id" class="parallax" data-speed="0.05">
                         </div>
-                    </div>
-
+                    </article>
                 </div>
             </div>
         </section>
