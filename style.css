@@ -1250,7 +1250,9 @@ footer {
 /* Contact section dark */
 [data-theme="dark"] #contact {
     background-color: #0D0C0B;
-    color: var(--stone-dark);
+}
+[data-theme="dark"] #contact .section-title {
+    color: var(--text-warm-black);
 }
 [data-theme="dark"] .contact-content p {
     color: var(--taupe-accent);
@@ -1258,7 +1260,9 @@ footer {
 @media (prefers-color-scheme: dark) {
     [data-theme="system"] #contact {
         background-color: #0D0C0B;
-        color: var(--stone-dark);
+    }
+    [data-theme="system"] #contact .section-title {
+        color: var(--text-warm-black);
     }
     [data-theme="system"] .contact-content p {
         color: var(--taupe-accent);
